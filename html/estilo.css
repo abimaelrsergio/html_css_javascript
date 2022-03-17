@@ -1,0 +1,21 @@
+h1 {
+    color: navy; /*cor do titulo*/
+}
+.trabalhando-bordas {
+    margin: 10px 10px 10px;
+    border: 54px solid yellow;
+}
+.tipo_fonte {
+    /*
+       Fontes genéricas
+       1 - Serif
+       2 - Sans-Serif
+       3 - Monospace
+       4 - Cursive
+       5 - Fantasy
+    */
+    font-family: arial, helvetica, Fantasy;
+}
+.format_text {
+    text-align: right;
+}
