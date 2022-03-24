@@ -12,11 +12,15 @@
         >Saudação</button>
 
         <div class="container mt-5">
-            <button id="ligado">Ligar</button>
+            <button id="ligado"
+                onclick="document.getElementById('lampada').src='acessa.gif'"
+            >Ligar</button>
             
             <img id="lampada" src="apagada.gif" alt="lampada" style="width:100px;">
 
-            <button id="desligado">Desligar</button>
+            <button id="desligado"
+                onclick="document.getElementById('lampada').src='apagada.gif'"
+            >Desligar</button>
         </div>
     </body>
 </html>
