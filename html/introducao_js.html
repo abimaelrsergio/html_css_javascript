@@ -2,8 +2,20 @@
 <html lang="pt-BR">
     <head>
         <title>Java Script</title>
+        <script>
+            function esconderElemento(){
+                var elemento = document.getElementById('paragrafo1');
+                if (elemento.style.display === 'none') {
+                    elemento.style.display = '';
+                } else {
+                    elemento.style.display = 'none';
+                }
+            }
+        </script>
     </head>
     <body>
+        <button type="button" onclick="esconderElemento()">Toggle</button>
+
         <h2>O que fazer com JavaScript</h2>
         <p id="bomdia">Bom dia pessoal!</p>
         <button 
@@ -38,5 +50,9 @@
             onclick="document.getElementById('paragrafo1').style.display=''" 
             >mostrar</button>
         </div>
+        <p id="paragrafo2"></p>
+        <script>
+            document.getElementById('paragrafo2').innerHTML = 'minha proposta é fazer trabalhos';
+        </script>
     </body>
 </html>
