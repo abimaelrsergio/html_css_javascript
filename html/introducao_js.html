@@ -2,16 +2,6 @@
 <html lang="pt-BR">
     <head>
         <title>Java Script</title>
-        <script>
-            function esconderElemento(){
-                var elemento = document.getElementById('paragrafo1');
-                if (elemento.style.display === 'none') {
-                    elemento.style.display = '';
-                } else {
-                    elemento.style.display = 'none';
-                }
-            }
-        </script>
     </head>
     <body>
         <button type="button" onclick="esconderElemento()">Toggle</button>
@@ -37,7 +27,7 @@
         <div class="container mt-5">
             <p id="licaoCasa" style="background-color: aliceblue;" >Não esquecer de fazer a lição de casa</p>
             <button type="button"
-                onclick="document.getElementById('licaoCasa').style.fontSize='36px'"
+                onclick="zoomText()"
             >clique para lembrar</button>
         </div>
         <div class="container mt-5">
@@ -51,8 +41,7 @@
             >mostrar</button>
         </div>
         <p id="paragrafo2"></p>
-        <script>
-            document.getElementById('paragrafo2').innerHTML = 'minha proposta é fazer trabalhos';
-        </script>
+        <script src="abimael.js"></script>
+        <script src="novo_conteudo.js"></script>
     </body>
 </html>
