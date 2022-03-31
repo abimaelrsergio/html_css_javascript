@@ -9,12 +9,12 @@
     <body>
         <header>
             <div class="container">
-                <h1>Indice de massa corporea</h1>
+                <h1 class="titulo">Indice de massa corporea</h1>
             </div>
         </header>
         <main>
             <section class="container">
-                <h2>Clientes</h2>
+                <h2 id="cabecalho_cliente">Clientes</h2>
                 <table>
                     <thead>
                         <tr class="clientes">
@@ -45,12 +45,12 @@
             </section>
         </main>
         <script>
-            console.log(document.querySelector("h1"));
-            var titulo = document.querySelector("h1");
+            var titulo = document.querySelector(".titulo");
             console.log(titulo);
             console.log(titulo.textContent);
             titulo.textContent = "Bananas de pijamas";
             console.log(titulo)
+            console.log('O id = ', document.querySelector("#cabecalho_cliente"))
         </script>
     </body>
 </html>
