@@ -7,6 +7,9 @@ body {
 }
 header{
     background-color: #333;
+    height: 3em;
+    color: #fff;
+    margin-bottom: 1em;
 }
 .container{
     width: 60%;
