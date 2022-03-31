@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <title>Calculo do IMC</title>
         <link rel="stylesheet" type="text/css" href="css/reset.css" >
+        <link rel="stylesheet" type="text/css" href="css/index.css">
     </head>
     <body>
         <header>
-            <div>
+            <div class="container">
                 <h1>Indice de massa corporea</h1>
             </div>
         </header>
         <main>
-            <section>
+            <section class="container">
                 <h2>Clientes</h2>
                 <table>
                     <thead>
-                        <tr>
+                        <tr class="clientes">
                             <th>Nome</th>
                             <th>Peso(kg)</th>
                             <th>Altura(m)</th>
@@ -43,5 +44,13 @@
                 </table>
             </section>
         </main>
+        <script>
+            console.log(document.querySelector("h1"));
+            var titulo = document.querySelector("h1");
+            console.log(titulo);
+            console.log(titulo.textContent);
+            titulo.textContent = "Bananas de pijamas";
+            console.log(titulo)
+        </script>
     </body>
 </html>
