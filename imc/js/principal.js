@@ -1,7 +1,7 @@
-// IMC = peso / altura x altura
 var paciente = document.querySelector('#primeiro-paciente');
 var tdPeso = paciente.querySelector('.inf-peso');
+var tdAltura = paciente.querySelector('.inf-altura');
 var peso = tdPeso.textContent;
-console.log(paciente);
-console.log(tdPeso);
-console.log(peso);
+var altura = tdAltura.textContent;
+var imc = peso / (altura * altura);
+console.log(imc);
