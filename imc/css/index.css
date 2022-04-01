@@ -16,6 +16,31 @@ header h1 {
     display: inline-block;
     vertical-align: middle;
 }
+table {
+    width: 100%;
+    margin-bottom: 1em;
+    table-layout: fixed;
+}
+td, th {
+    padding: .7em;
+    margin: 0;
+    text-align: center;
+}
+th {
+    font-weight: bold;
+    background-color: #eee;
+}
+section {
+    margin: 2em 0;
+    overflow: hidden;
+}
+section h2 {
+    font-size: 3em;
+    display: block;
+    padding-bottom: .5em;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: .5em;
+}
 .container{
     width: 60%;
     height: 100%;
