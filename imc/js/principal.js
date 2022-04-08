@@ -12,14 +12,16 @@ for(var i = 0; i < pacientes.length; i++){
         console.log('Peso inválido');
         pesoEhValido = false;
         tdImc.textContent = 'Peso inválido';
+        paciente.style.backgroundColor = 'lightcoral';
     }
     if (altura <= 0 || altura >= 3.0) {
         console.log('Altura inválida');
         alturaEhValida = false;
         tdImc.textContent = 'Altura inválida';
+        paciente.style.backgroundColor = 'lightcoral';
     }
     if (alturaEhValida && pesoEhValido) {
         var imc = peso / (altura * altura);
-        tdImc.textContent = imc;
-    }        
+        tdImc.textContent = imc.toFixed(2);
+    }
 }

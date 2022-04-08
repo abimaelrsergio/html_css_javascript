@@ -49,3 +49,7 @@ section h2 {
 .clientes {
     
 } 
+
+.cliente-invalido {
+    background-color: lightcoral;
+}
