@@ -23,6 +23,8 @@ for(var i = 0; i < pacientes.length; i++){
         tdImc.textContent = imc.toFixed(2);
     }
     var botao = document.querySelector('#salvar-cliente');
-    console.log('botao', botao);
-    botao.addEventListener('click', () => console.log('Foi clicado') );
+    botao.addEventListener('click', (event) => { 
+        event.preventDefault();
+        console.log('Foi clicado'); 
+    } );
 }
