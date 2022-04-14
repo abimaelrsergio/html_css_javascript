@@ -22,6 +22,7 @@ for(var i = 0; i < pacientes.length; i++){
         var imc = peso / (altura * altura);
         tdImc.textContent = imc.toFixed(2);
     }
-    var titulo = document.querySelector('.titulo');
-    titulo.addEventListener('click', () => console.log('Foi clicado') );
+    var botao = document.querySelector('#salvar-cliente');
+    console.log('botao', botao);
+    botao.addEventListener('click', () => console.log('Foi clicado') );
 }
