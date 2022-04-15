@@ -52,6 +52,7 @@ botao.addEventListener('click', (event) => {
     clienteTr.appendChild(gorduraTd)
     clienteTr.appendChild(imcTd)
 
-    console.log(clienteTr);
+    var tabela = document.querySelector('#tabela-clientes')
+    tabela.appendChild(clienteTr);
 } );
 
