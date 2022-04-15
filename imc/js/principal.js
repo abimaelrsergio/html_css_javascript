@@ -46,7 +46,12 @@ botao.addEventListener('click', (event) => {
     alturaTd.textContent = altura;
     gorduraTd.textContent = gordura;
 
+    clienteTr.appendChild(nomeTd)
+    clienteTr.appendChild(pesoTd)
+    clienteTr.appendChild(alturaTd)
+    clienteTr.appendChild(gorduraTd)
+    clienteTr.appendChild(imcTd)
+
     console.log(clienteTr);
-    console.log(nomeTd, pesoTd, alturaTd, gorduraTd);
 } );
 
