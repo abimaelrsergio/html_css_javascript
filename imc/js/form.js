@@ -3,27 +3,11 @@ botao.addEventListener('click', (event) => {
     event.preventDefault();
     
     var form = document.querySelector('#form-adicionar');
-    obterInformacoesClientes(form);
+    var cliente = obterInformacoesClientes(form);
+    console.log(cliente);
 
     // Criando a linha (tr) e as colunas (td)
-    var clienteTr = document.createElement('tr');
-    var nomeTd = document.createElement('td');
-    var pesoTd = document.createElement('td');
-    var alturaTd = document.createElement('td');
-    var gorduraTd = document.createElement('td');
-    var imcTd = document.createElement('td');
-
-    nomeTd.textContent = nome;
-    pesoTd.textContent = peso;
-    alturaTd.textContent = altura;
-    gorduraTd.textContent = gordura;
-    imcTd.textContent = calcularImc(peso, altura); // DRY - reaproveitamento de código
-
-    clienteTr.appendChild(nomeTd)
-    clienteTr.appendChild(pesoTd)
-    clienteTr.appendChild(alturaTd)
-    clienteTr.appendChild(gorduraTd)
-    clienteTr.appendChild(imcTd)
+    
 
     // Adicinar nova linha na tabela
     var tabela = document.querySelector('#tabela-clientes')
@@ -35,7 +19,32 @@ function obterInformacoesClientes(form) {
         nome: form.nome.value,
         peso: form.peso.value,
         altura: form.altura.value,
-        gordura: form.gordura.value
+        gordura: form.gordura.value,
+        imc: calcularImc(form.peso.value, form.altura.value)
     };
     return cliente;
+}
+
+function criarLinha() {
+    
+    var nomeTd = document.createElement('td');
+    var pesoTd = document.createElement('td');
+    var alturaTd = document.createElement('td');
+    var gorduraTd = document.createElement('td');
+    var imcTd = document.createElement('td');
+    
+    nomeTd.textContent = nome;
+    pesoTd.textContent = peso;
+    alturaTd.textContent = altura;
+    gorduraTd.textContent = gordura;
+    imcTd.textContent = calcularImc(peso, altura); 
+    
+    var clienteTr = document.createElement('tr');
+    clienteTr.appendChild(nomeTd);
+    clienteTr.appendChild(pesoTd);
+    clienteTr.appendChild(alturaTd);
+    clienteTr.appendChild(gorduraTd);
+    clienteTr.appendChild(imcTd);
+    
+    return clienteTr;
 }
