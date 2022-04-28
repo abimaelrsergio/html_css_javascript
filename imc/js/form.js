@@ -19,26 +19,20 @@ function obterInformacoesClientes(form) {
     return cliente;
 }
 
-function criarLinha(cliente) {
-    
-    var nomeTd = document.createElement('td');
-    var pesoTd = document.createElement('td');
-    var alturaTd = document.createElement('td');
-    var gorduraTd = document.createElement('td');
-    var imcTd = document.createElement('td');
-    
-    nomeTd.textContent = cliente.nome;
-    pesoTd.textContent = cliente.peso;
-    alturaTd.textContent = cliente.altura;
-    gorduraTd.textContent = cliente.gordura;
-    imcTd.textContent = calcularImc(cliente.peso, cliente.altura);
-    
-    var clienteTr = document.createElement('tr');
-    clienteTr.appendChild(nomeTd);
-    clienteTr.appendChild(pesoTd);
-    clienteTr.appendChild(alturaTd);
-    clienteTr.appendChild(gorduraTd);
-    clienteTr.appendChild(imcTd);
+function criarColuna(dado, classe) {
+    var coluna = document.createElement('td');
+    coluna.classList.add(classe);
+    coluna.textContent = dado;
+    return coluna;
+}
 
+function criarLinha(cliente) {
+    var clienteTr = document.createElement('tr');
+    clienteTr.classList.add('paciente');
+    clienteTr.appendChild(criarColuna(cliente.nome, 'info-nome'));
+    clienteTr.appendChild(criarColuna(cliente.peso, 'inf-peso'));
+    clienteTr.appendChild(criarColuna(cliente.altura, 'info-altura'));
+    clienteTr.appendChild(criarColuna(cliente.gordura, 'info-gordura'));
+    clienteTr.appendChild(criarColuna(cliente.imc, 'infor-imc'));
     return clienteTr;
 }
