@@ -1,17 +1,11 @@
 var botao = document.querySelector('#salvar-cliente');
 botao.addEventListener('click', (event) => { 
     event.preventDefault();
-    
     var form = document.querySelector('#form-adicionar');
     var cliente = obterInformacoesClientes(form);
-    console.log(cliente);
-
-    // Criando a linha (tr) e as colunas (td)
-    
-
-    // Adicinar nova linha na tabela
+    var linha = criarLinha(cliente);
     var tabela = document.querySelector('#tabela-clientes')
-    tabela.appendChild(clienteTr);
+    tabela.appendChild(linha);
 } );
 
 function obterInformacoesClientes(form) {
@@ -25,7 +19,7 @@ function obterInformacoesClientes(form) {
     return cliente;
 }
 
-function criarLinha() {
+function criarLinha(cliente) {
     
     var nomeTd = document.createElement('td');
     var pesoTd = document.createElement('td');
@@ -33,11 +27,11 @@ function criarLinha() {
     var gorduraTd = document.createElement('td');
     var imcTd = document.createElement('td');
     
-    nomeTd.textContent = nome;
-    pesoTd.textContent = peso;
-    alturaTd.textContent = altura;
-    gorduraTd.textContent = gordura;
-    imcTd.textContent = calcularImc(peso, altura); 
+    nomeTd.textContent = cliente.nome;
+    pesoTd.textContent = cliente.peso;
+    alturaTd.textContent = cliente.altura;
+    gorduraTd.textContent = cliente.gordura;
+    imcTd.textContent = calcularImc(cliente.peso, cliente.altura);
     
     var clienteTr = document.createElement('tr');
     clienteTr.appendChild(nomeTd);
@@ -45,6 +39,6 @@ function criarLinha() {
     clienteTr.appendChild(alturaTd);
     clienteTr.appendChild(gorduraTd);
     clienteTr.appendChild(imcTd);
-    
+
     return clienteTr;
 }
