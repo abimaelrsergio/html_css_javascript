@@ -3,10 +3,41 @@ botao.addEventListener('click', (event) => {
     event.preventDefault();
     var form = document.querySelector('#form-adicionar');
     var cliente = obterInformacoesClientes(form);
+    var erros = validarCliente(cliente);
+    if (erros.length > 0) {
+        exibirMensagensDeErro(erros);
+        return;
+    }
     var linha = criarLinha(cliente);
     var tabela = document.querySelector('#tabela-clientes')
     tabela.appendChild(linha);
+    form.reset();
 } );
+
+function exibirMensagensDeErro(erros) {
+    var ul = document.querySelector('#mensagens-erro');
+    erros.forEach(function(erro){
+        var li = document.createElement('li');
+        li.textContent = erro;
+        ul.appendChild(li);
+    });
+}
+
+function validarCliente(cliente) {
+    var erros = [];
+    if (cliente.nome.length == 0) {
+        erros.push('O nome nao pode ser em branco!');
+    }
+
+    if (!validaPeso(cliente.peso)){
+        erros.push('Peso inválido');
+    }
+
+    if (!validaAltura(cliente.altura)) {
+        erros.push('Altura inválida');
+    }
+    return erros;
+}
 
 function obterInformacoesClientes(form) {
     var cliente = {

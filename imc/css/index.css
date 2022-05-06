@@ -84,3 +84,7 @@ section h2 {
     display: block;
     margin: 10px 0px;  
 }
+
+#mensagens-erro {
+    color: red;
+}
