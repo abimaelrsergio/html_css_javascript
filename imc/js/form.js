@@ -12,10 +12,13 @@ botao.addEventListener('click', (event) => {
     var tabela = document.querySelector('#tabela-clientes')
     tabela.appendChild(linha);
     form.reset();
+    var ul = document.querySelector('#mensagens-erro');
+    ul.innerHTML = '';
 } );
 
 function exibirMensagensDeErro(erros) {
     var ul = document.querySelector('#mensagens-erro');
+    ul.innerHTML = '';
     erros.forEach(function(erro){
         var li = document.createElement('li');
         li.textContent = erro;
@@ -27,6 +30,18 @@ function validarCliente(cliente) {
     var erros = [];
     if (cliente.nome.length == 0) {
         erros.push('O nome nao pode ser em branco!');
+    }
+
+    if (cliente.gordura.length == 0) {
+        erros.push('A gordura nao pode ser em branco');
+    }
+    
+    if (cliente.peso.length == 0) {
+        erros.push('O peso nao pode ser em branco');
+    }
+    
+    if (cliente.altura.length == 0) {
+        erros.push('A altura nao pode ser em branco');
     }
 
     if (!validaPeso(cliente.peso)){
