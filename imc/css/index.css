@@ -97,3 +97,9 @@ section h2 {
 table, th, td {
     border: 1px solid black;
 }
+
+#filtrar-tabela {
+    width: 200px;
+    height: 35px;
+    margin-bottom: 10px;
+}
