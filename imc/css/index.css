@@ -88,3 +88,12 @@ section h2 {
 #mensagens-erro {
     color: red;
 }
+
+.fadeOut {
+    opacity: 0;
+    transition: 0.7s;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
