@@ -94,6 +94,10 @@ section h2 {
     transition: 0.7s;
 }
 
+.invisivel {
+    display: none;
+}
+
 table, th, td {
     border: 1px solid black;
 }
